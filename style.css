@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    color: #222;
+}
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 8%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    position: sticky;
+    top: 0;
+}
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.nav-links a:hover {
+    color: yellow;
+}
+.hero {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+.hero-content {
+    background: rgba(255,255,255,0.2);
+    padding: 50px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+.hero h1 {
+    font-size: 60px;
+    color: white;
+}
+.hero p {
+    margin-top: 20px;
+    color: white;
+    font-size: 18px;
+}
+.hero button {
+    margin-top: 30px;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 40px;
+    background: #ff0080;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+.search-box {
+    text-align: center;
+    margin: 40px;
+}
+#searchInput {
+    width: 60%;
+    padding: 15px;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+.products-section {
+    padding: 80px 8%;
+}
+.products-section h2 {
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    margin-bottom: 40px;
+}
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap: 30px;
+}
+.product-card {
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.4s;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.product-card:hover {
+    transform: translateY(-10px);
+}
+.product-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+.product-card h3 {
+    padding: 20px;
+    color: white;
+}
+.product-card p {
+    padding: 0 20px;
+    color: white;
+}
+.price {
+    padding: 20px;
+    color: yellow;
+    font-size: 24px;
+    font-weight: bold;
+}
+.product-card button {
+    margin: 20px;
+    width: calc(100% - 40px);
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #ff0080, #7928ca);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.cart-section {
+    padding: 80px 8%;
+    background: rgba(255,255,255,0.2);
+    margin: 50px;
+    border-radius: 20px;
+}
+.cart-section h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+.cart-item {
+    background: white;
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 12px;
+}
+#totalPrice {
+    margin-top: 20px;
+    color: yellow;
+}
+.contact-section {
+    padding: 80px 8%;
+}
+.contact-section h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    outline: none;
+}
+.contact-form button {
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: #ff0080;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+footer {
+    text-align: center;
+    padding: 40px;
+    color: white;
+}
+@media(max-width:768px){
+    .navbar{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .hero h1{
+        font-size: 40px;
+    }
+    #searchInput{
+        width: 90%;
+    }
+}

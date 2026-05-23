@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopVerse E-Commerce</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                🛍 ShopVerse
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#cart-section">Cart</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Modern Shopping Experience</h1>
+            <p>
+                Buy premium gadgets and electronics with a modern and colourful shopping interface.
+            </p>
+            <button onclick="scrollProducts()">
+                 Shop Now
+            </button>
+        </div>
+    </section>
+    <section class="search-box">
+        <input type="text" id="searchInput" placeholder="Search Products...">
+    </section>
+    <section class="products-section" id="products">
+        <h2>Featured Products</h2>
+        <div class="products-container">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?q=80&w=1200&auto=format&fit=crop"
+alt="Gaming Laptop">
+                <h3>Gaming Laptop</h3>
+                <p>Ultra-fast performance for gaming and coding.</p>
+                <div class="price">₹89,999</div>
+                <button onclick="addToCart('Gaming Laptop', 89999)">
+                </button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1200&auto=format&fit=crop">
+                <h3>Wireless Headphones</h3>
+                <p>Premium sound quality with noise cancellation.</p>
+                <div class="price">₹4,999</div>
+                <button onclick="addToCart('Wireless Headphones', 4999)">
+                </button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?q=80&w=1200&auto=format&fit=crop">
+                <h3>Smart Watch</h3>
+                <p>Track your health and notifications.</p>
+                <div class="price">₹7,999</div>
+                <button onclick="addToCart('Smart Watch', 7999)">
+                </button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1200&auto=format&fit=crop">
+                <h3>DSLR Camera</h3>
+                <p>Capture moments with crystal-clear quality.</p>
+                <div class="price">₹54,999</div>
+                <button onclick="addToCart('DSLR Camera', 54999)">
+                </button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?q=80&w=1200&auto=format&fit=crop">
+                <h3>Smartphone</h3>
+                <p>Latest flagship smartphone with amazing camera.</p>
+                <div class="price">₹69,999</div>
+                <button onclick="addToCart('Smartphone', 69999)">
+                </button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1200&auto=format&fit=crop">
+                <h3>Luxury Watch</h3>
+                <p>Elegant premium design with smart features.</p>
+                <div class="price">₹14,999</div>
+                <button onclick="addToCart('Luxury Watch', 14999)">
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="cart-section" id="cart-section">
+        <h2>Shopping Cart</h2>
+        <div id="cartItems">
+            <p>No products added yet.</p>
+        </div>
+        <h3 id="totalPrice">
+            Total: ₹0
+        </h3>
+    </section>
+    <section class="contact-section" id="contact">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Enter Your Name">
+            <input type="email" placeholder="Enter Your Email">
+            <textarea rows="5" placeholder="Enter Your Message"></textarea>
+            <button type="submit">
+            </button>
+        </form>
+    </section>
+    <footer>
+        <h2>ShopVerse</h2>
+        <p>Premium E-Commerce Experience</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
